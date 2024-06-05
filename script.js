@@ -11,7 +11,7 @@ let interval;
 
 btnStart.addEventListener("click", () => {
   clearInterval(interval);
-  interval = setInterval(startTimer, 0);
+  interval = setInterval(startTimer, 10);
 });
 btnStop.addEventListener("click", () => {
   clearInterval(interval);
