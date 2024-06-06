@@ -81,7 +81,7 @@ button:hover,
 button:focus {
   border-color: orange;
   color: orange;
-  box-shadow: 0px 4px 27px -12px orange; /*The sg=hadow is 4 pixel offset from the button, 
+  box-shadow: 0px 4px 27px -12px orange; /*The shadow is 4 pixel offset from the button, 
   has a blur radius of 27 pixels 
   and is -12 pixe;s spread out and shadow is orange in color*/
 }
