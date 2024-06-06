@@ -15,7 +15,10 @@
   position: relative;
   top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(
+    -50%,
+    -50%
+  ); /*translates the wrapper content 50% left and 50% to the top centering it.*/
 }
 .wrapper h1 {
   text-align: center;
@@ -30,7 +33,7 @@
   position: relative;
   display: inline-block;
   color: white;
-  z-index: 9999;
+  z-index: 9999; /*ensures the displaying time is above other elemnts*/
   font-size: 35px;
   margin-bottom: 120px;
 }
@@ -40,21 +43,25 @@
   width: 230px;
   height: 230px;
   background-color: orange;
-  z-index: -1;
+  z-index: -1; /*ensuring the pseudo element is behind other element*/
   border-radius: 50%;
   left: -10%;
   top: -63%;
-  animation-name: shine;
+  animation-name: shines;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
-@keyframes shine {
+@keyframes shines {
+  /*defines the animation*/
   0%,
   100% {
-    box-shadow: 0px 0px 32px -12px rgba(246, 180, 0, 0.5);
+    box-shadow: 0px 0px 32px -12px rgba(235, 174, 8, 0.5);
+    /* 0px 0px specifies the horizontal and vertical offset of the shadow,
+    32px specifies the blur radius of the shadow,
+    -12px (at 0% and 100%) specifies the spread radius of the shadow. */
   }
   50% {
-    box-shadow: 0px 0px 32px 3px rgba(246, 180, 0, 0.5);
+    box-shadow: 0px 0px 32px 3px rgba(235, 174, 8, 0.5);
   }
 }
 button {
@@ -63,15 +70,18 @@ button {
   border: 1px solid olivedrab;
   border-radius: 28px;
   color: white;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease; 
   outline: 0;
 }
 button:not(:last-child) {
+  /* targets all button except the last button*/
   margin-right: 20px;
 }
 button:hover,
 button:focus {
   border-color: orange;
   color: orange;
-  box-shadow: 0px 4px 27px -12px orange;
+  box-shadow: 0px 4px 27px -12px orange; /*The sg=hadow is 4 pixel offset from the button, 
+  has a blur radius of 27 pixels 
+  and is -12 pixe;s spread out and shadow is orange in color*/
 }
